@@ -52,3 +52,20 @@ To learn and demonstrate a complete data analytics workflow — from raw data to
 | Relationship | Relationship | Distance vs. duration by bike type; temperature vs. ridership |
 
 ## Repository Contents
+├── dashboard/
+│ ├── January_Viz_Divvy.pbix (full interactive Power BI file)
+│ └── dashboard_preview.pdf (static export of all 8 pages)
+├── python/
+│ └── explore_data.py (data cleaning + all statistical analysis)
+└── README.md
+
+## Methodology Notes
+
+- All data quality decisions (flagging vs. deleting outliers, calendar-boundary trimming) are documented and applied consistently rather than silently dropping data.
+- Statistical outlier detection (IQR method) is explicitly distinguished from data-quality flagging — an important distinction, since "statistically unusual" does not mean "broken data."
+- Predictive modeling results are reported honestly, including a model that did *not* outperform a naive baseline once corrected for class imbalance — a deliberate choice to demonstrate sound analytical judgment over inflated results.
+- External weather data was sourced from NWS official records and a secondary calendar-based weather source; a data-integrity issue (Celsius/Fahrenheit unit mismatch) was caught and corrected before use.
+
+## About
+
+Built as a self-directed learning project to build hands-on skills in Python and Power BI, following a structured 9-pattern data analytics framework.
